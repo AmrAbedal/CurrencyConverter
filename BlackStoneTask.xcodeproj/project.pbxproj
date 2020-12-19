@@ -3,10 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18E17B68CB135E3F34539FF4 /* Pods_BlackStoneTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262A5F89AD21DB04C1BB058F /* Pods_BlackStoneTaskTests.framework */; };
+		A040D990258E6CC90057B5FC /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A040D98F258E6CC90057B5FC /* Array+Extension.swift */; };
+		A040D9A3258E73D90057B5FC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A040D9A2258E73D90057B5FC /* main.swift */; };
+		A04F98FC258E2ECC008754E8 /* CurrenciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F98FB258E2ECC008754E8 /* CurrenciesViewModel.swift */; };
+		A04F98FE258E2F50008754E8 /* ScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F98FD258E2F50008754E8 /* ScreenState.swift */; };
+		A04F9900258E3020008754E8 /* CurrenciesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F98FF258E3020008754E8 /* CurrenciesDataSource.swift */; };
+		A04F9902258E3068008754E8 /* CurrenciesResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F9901258E3068008754E8 /* CurrenciesResponce.swift */; };
+		A04F9904258E311C008754E8 /* MoyaCurrenciesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F9903258E311C008754E8 /* MoyaCurrenciesDataSource.swift */; };
+		A04F9906258E314F008754E8 /* CurrenciesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F9905258E314F008754E8 /* CurrenciesEndPoint.swift */; };
+		A04F9908258E3199008754E8 /* MoyaCurrenciesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F9907258E3199008754E8 /* MoyaCurrenciesEndPoint.swift */; };
+		A04F990A258E369C008754E8 /* CurrenciesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F9909258E369C008754E8 /* CurrenciesUseCase.swift */; };
+		A04F990C258E37DA008754E8 /* DefaultCurrenciesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F990B258E37DA008754E8 /* DefaultCurrenciesUseCase.swift */; };
+		A04F9915258E4032008754E8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F9914258E4032008754E8 /* Constants.swift */; };
+		A04F9917258E4A17008754E8 /* CurrenciesConvertResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F9916258E4A17008754E8 /* CurrenciesConvertResponse.swift */; };
+		A04F991A258E4C9A008754E8 /* CurrencyRateScreenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F9919258E4C9A008754E8 /* CurrencyRateScreenData.swift */; };
+		A04F991D258E4FCC008754E8 /* CurrenciesRatesTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F991C258E4FCC008754E8 /* CurrenciesRatesTableViewDataSource.swift */; };
+		A04F9920258E5ADA008754E8 /* CurrencyConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F991E258E5ADA008754E8 /* CurrencyConverterViewController.swift */; };
+		A04F9921258E5ADA008754E8 /* CurrencyConverterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A04F991F258E5ADA008754E8 /* CurrencyConverterViewController.xib */; };
 		A067EC50258E22160073667A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A067EC4F258E22160073667A /* AppDelegate.swift */; };
 		A067EC52258E22160073667A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A067EC51258E22160073667A /* SceneDelegate.swift */; };
 		A067EC54258E22160073667A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A067EC53258E22160073667A /* ViewController.swift */; };
@@ -15,6 +33,8 @@
 		A067EC5C258E22180073667A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A067EC5A258E22180073667A /* LaunchScreen.storyboard */; };
 		A067EC67258E22180073667A /* BlackStoneTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A067EC66258E22180073667A /* BlackStoneTaskTests.swift */; };
 		A067EC72258E22180073667A /* BlackStoneTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A067EC71258E22180073667A /* BlackStoneTaskUITests.swift */; };
+		BB03E1FC2298256E2C0BEF82 /* Pods_BlackStoneTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E095FD6540CCBEF3C6E02672 /* Pods_BlackStoneTask.framework */; };
+		DBE876194459DA7E412B396D /* Pods_BlackStoneTask_BlackStoneTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11514F220B1AD9C73E743FA /* Pods_BlackStoneTask_BlackStoneTaskUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +54,43 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A040D99E258E73D90057B5FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		01D347B76A49C3CE54AD611F /* Pods-BlackStoneTask-BlackStoneTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackStoneTask-BlackStoneTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-BlackStoneTask-BlackStoneTaskUITests/Pods-BlackStoneTask-BlackStoneTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
+		13A61F6BC13F414D7CDE83CF /* Pods-BlackStoneTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackStoneTask.debug.xcconfig"; path = "Target Support Files/Pods-BlackStoneTask/Pods-BlackStoneTask.debug.xcconfig"; sourceTree = "<group>"; };
+		262A5F89AD21DB04C1BB058F /* Pods_BlackStoneTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlackStoneTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42799086E33684A98BFF9113 /* Pods-BlackStoneTask-BlackStoneTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackStoneTask-BlackStoneTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-BlackStoneTask-BlackStoneTaskUITests/Pods-BlackStoneTask-BlackStoneTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		47F60937F3BDBEE3779A893F /* Pods-BlackStoneTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackStoneTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-BlackStoneTaskTests/Pods-BlackStoneTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
+		84B365F3B5C9E05F879D9774 /* Pods-BlackStoneTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackStoneTask.release.xcconfig"; path = "Target Support Files/Pods-BlackStoneTask/Pods-BlackStoneTask.release.xcconfig"; sourceTree = "<group>"; };
+		A040D98F258E6CC90057B5FC /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		A040D9A0258E73D90057B5FC /* CodeChallenge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CodeChallenge; sourceTree = BUILT_PRODUCTS_DIR; };
+		A040D9A2258E73D90057B5FC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A04F98FB258E2ECC008754E8 /* CurrenciesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesViewModel.swift; sourceTree = "<group>"; };
+		A04F98FD258E2F50008754E8 /* ScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenState.swift; sourceTree = "<group>"; };
+		A04F98FF258E3020008754E8 /* CurrenciesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesDataSource.swift; sourceTree = "<group>"; };
+		A04F9901258E3068008754E8 /* CurrenciesResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesResponce.swift; sourceTree = "<group>"; };
+		A04F9903258E311C008754E8 /* MoyaCurrenciesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaCurrenciesDataSource.swift; sourceTree = "<group>"; };
+		A04F9905258E314F008754E8 /* CurrenciesEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesEndPoint.swift; sourceTree = "<group>"; };
+		A04F9907258E3199008754E8 /* MoyaCurrenciesEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaCurrenciesEndPoint.swift; sourceTree = "<group>"; };
+		A04F9909258E369C008754E8 /* CurrenciesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesUseCase.swift; sourceTree = "<group>"; };
+		A04F990B258E37DA008754E8 /* DefaultCurrenciesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCurrenciesUseCase.swift; sourceTree = "<group>"; };
+		A04F9914258E4032008754E8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A04F9916258E4A17008754E8 /* CurrenciesConvertResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesConvertResponse.swift; sourceTree = "<group>"; };
+		A04F9919258E4C9A008754E8 /* CurrencyRateScreenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRateScreenData.swift; sourceTree = "<group>"; };
+		A04F991C258E4FCC008754E8 /* CurrenciesRatesTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesRatesTableViewDataSource.swift; sourceTree = "<group>"; };
+		A04F991E258E5ADA008754E8 /* CurrencyConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterViewController.swift; sourceTree = "<group>"; };
+		A04F991F258E5ADA008754E8 /* CurrencyConverterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyConverterViewController.xib; sourceTree = "<group>"; };
 		A067EC4C258E22160073667A /* BlackStoneTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackStoneTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A067EC4F258E22160073667A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A067EC51258E22160073667A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,13 +105,24 @@
 		A067EC6D258E22180073667A /* BlackStoneTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackStoneTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A067EC71258E22180073667A /* BlackStoneTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackStoneTaskUITests.swift; sourceTree = "<group>"; };
 		A067EC73258E22180073667A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB85DD71C4024DBEB7229118 /* Pods-BlackStoneTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackStoneTaskTests.release.xcconfig"; path = "Target Support Files/Pods-BlackStoneTaskTests/Pods-BlackStoneTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		E095FD6540CCBEF3C6E02672 /* Pods_BlackStoneTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlackStoneTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E11514F220B1AD9C73E743FA /* Pods_BlackStoneTask_BlackStoneTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlackStoneTask_BlackStoneTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A040D99D258E73D90057B5FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A067EC49258E22160073667A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB03E1FC2298256E2C0BEF82 /* Pods_BlackStoneTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E17B68CB135E3F34539FF4 /* Pods_BlackStoneTaskTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,19 +138,160 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE876194459DA7E412B396D /* Pods_BlackStoneTask_BlackStoneTaskUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		138B0E6977B4FE5F796AA325 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E095FD6540CCBEF3C6E02672 /* Pods_BlackStoneTask.framework */,
+				E11514F220B1AD9C73E743FA /* Pods_BlackStoneTask_BlackStoneTaskUITests.framework */,
+				262A5F89AD21DB04C1BB058F /* Pods_BlackStoneTaskTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		771DEAAAD1C014BC3367372A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				13A61F6BC13F414D7CDE83CF /* Pods-BlackStoneTask.debug.xcconfig */,
+				84B365F3B5C9E05F879D9774 /* Pods-BlackStoneTask.release.xcconfig */,
+				42799086E33684A98BFF9113 /* Pods-BlackStoneTask-BlackStoneTaskUITests.debug.xcconfig */,
+				01D347B76A49C3CE54AD611F /* Pods-BlackStoneTask-BlackStoneTaskUITests.release.xcconfig */,
+				47F60937F3BDBEE3779A893F /* Pods-BlackStoneTaskTests.debug.xcconfig */,
+				CB85DD71C4024DBEB7229118 /* Pods-BlackStoneTaskTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A040D98E258E66450057B5FC /* Domains */ = {
+			isa = PBXGroup;
+			children = (
+				A04F9905258E314F008754E8 /* CurrenciesEndPoint.swift */,
+				A04F990D258E37FD008754E8 /* Protocols */,
+				A04F9912258E38AC008754E8 /* UseCases */,
+			);
+			path = Domains;
+			sourceTree = "<group>";
+		};
+		A040D9A1258E73D90057B5FC /* CodeChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				A040D9A2258E73D90057B5FC /* main.swift */,
+			);
+			path = CodeChallenge;
+			sourceTree = "<group>";
+		};
+		A04F990D258E37FD008754E8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A04F9909258E369C008754E8 /* CurrenciesUseCase.swift */,
+				A04F98FF258E3020008754E8 /* CurrenciesDataSource.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A04F990E258E3828008754E8 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A04F9923258E5B08008754E8 /* Currencies */,
+				A04F9922258E5AED008754E8 /* Currency Converter */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A04F990F258E3842008754E8 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				A04F9903258E311C008754E8 /* MoyaCurrenciesDataSource.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		A04F9910258E384E008754E8 /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				A04F9911258E3899008754E8 /* EndPoints */,
+				A04F990F258E3842008754E8 /* network */,
+			);
+			path = framework;
+			sourceTree = "<group>";
+		};
+		A04F9911258E3899008754E8 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				A04F9907258E3199008754E8 /* MoyaCurrenciesEndPoint.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		A04F9912258E38AC008754E8 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				A04F990B258E37DA008754E8 /* DefaultCurrenciesUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		A04F9913258E38BD008754E8 /* JsonEntities */ = {
+			isa = PBXGroup;
+			children = (
+				A04F9901258E3068008754E8 /* CurrenciesResponce.swift */,
+				A04F9916258E4A17008754E8 /* CurrenciesConvertResponse.swift */,
+			);
+			path = JsonEntities;
+			sourceTree = "<group>";
+		};
+		A04F9918258E4C72008754E8 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A04F9913258E38BD008754E8 /* JsonEntities */,
+				A04F991B258E4CD4008754E8 /* PresentaionEntities */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		A04F991B258E4CD4008754E8 /* PresentaionEntities */ = {
+			isa = PBXGroup;
+			children = (
+				A04F9919258E4C9A008754E8 /* CurrencyRateScreenData.swift */,
+			);
+			path = PresentaionEntities;
+			sourceTree = "<group>";
+		};
+		A04F9922258E5AED008754E8 /* Currency Converter */ = {
+			isa = PBXGroup;
+			children = (
+				A04F991E258E5ADA008754E8 /* CurrencyConverterViewController.swift */,
+				A04F991F258E5ADA008754E8 /* CurrencyConverterViewController.xib */,
+			);
+			path = "Currency Converter";
+			sourceTree = "<group>";
+		};
+		A04F9923258E5B08008754E8 /* Currencies */ = {
+			isa = PBXGroup;
+			children = (
+				A067EC53258E22160073667A /* ViewController.swift */,
+				A04F98FB258E2ECC008754E8 /* CurrenciesViewModel.swift */,
+				A04F991C258E4FCC008754E8 /* CurrenciesRatesTableViewDataSource.swift */,
+			);
+			path = Currencies;
+			sourceTree = "<group>";
+		};
 		A067EC43258E22160073667A = {
 			isa = PBXGroup;
 			children = (
 				A067EC4E258E22160073667A /* BlackStoneTask */,
 				A067EC65258E22180073667A /* BlackStoneTaskTests */,
 				A067EC70258E22180073667A /* BlackStoneTaskUITests */,
+				A040D9A1258E73D90057B5FC /* CodeChallenge */,
 				A067EC4D258E22160073667A /* Products */,
+				771DEAAAD1C014BC3367372A /* Pods */,
+				138B0E6977B4FE5F796AA325 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +301,7 @@
 				A067EC4C258E22160073667A /* BlackStoneTask.app */,
 				A067EC62258E22180073667A /* BlackStoneTaskTests.xctest */,
 				A067EC6D258E22180073667A /* BlackStoneTaskUITests.xctest */,
+				A040D9A0258E73D90057B5FC /* CodeChallenge */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,8 +310,14 @@
 			isa = PBXGroup;
 			children = (
 				A067EC4F258E22160073667A /* AppDelegate.swift */,
+				A040D98F258E6CC90057B5FC /* Array+Extension.swift */,
+				A04F9914258E4032008754E8 /* Constants.swift */,
+				A04F98FD258E2F50008754E8 /* ScreenState.swift */,
 				A067EC51258E22160073667A /* SceneDelegate.swift */,
-				A067EC53258E22160073667A /* ViewController.swift */,
+				A04F990E258E3828008754E8 /* Presentation */,
+				A040D98E258E66450057B5FC /* Domains */,
+				A04F9918258E4C72008754E8 /* Entities */,
+				A04F9910258E384E008754E8 /* framework */,
 				A067EC55258E22160073667A /* Main.storyboard */,
 				A067EC58258E22180073667A /* Assets.xcassets */,
 				A067EC5A258E22180073667A /* LaunchScreen.storyboard */,
@@ -131,13 +347,32 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A040D99F258E73D90057B5FC /* CodeChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A040D9A6258E73D90057B5FC /* Build configuration list for PBXNativeTarget "CodeChallenge" */;
+			buildPhases = (
+				A040D99C258E73D90057B5FC /* Sources */,
+				A040D99D258E73D90057B5FC /* Frameworks */,
+				A040D99E258E73D90057B5FC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CodeChallenge;
+			productName = CodeChallenge;
+			productReference = A040D9A0258E73D90057B5FC /* CodeChallenge */;
+			productType = "com.apple.product-type.tool";
+		};
 		A067EC4B258E22160073667A /* BlackStoneTask */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A067EC76258E22180073667A /* Build configuration list for PBXNativeTarget "BlackStoneTask" */;
 			buildPhases = (
+				C107519047702392D8192F20 /* [CP] Check Pods Manifest.lock */,
 				A067EC48258E22160073667A /* Sources */,
 				A067EC49258E22160073667A /* Frameworks */,
 				A067EC4A258E22160073667A /* Resources */,
+				9A6863264610FE15510D831B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +387,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A067EC79258E22180073667A /* Build configuration list for PBXNativeTarget "BlackStoneTaskTests" */;
 			buildPhases = (
+				BDB2567CEACE541F05A0E8DC /* [CP] Check Pods Manifest.lock */,
 				A067EC5E258E22180073667A /* Sources */,
 				A067EC5F258E22180073667A /* Frameworks */,
 				A067EC60258E22180073667A /* Resources */,
@@ -170,9 +406,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A067EC7C258E22180073667A /* Build configuration list for PBXNativeTarget "BlackStoneTaskUITests" */;
 			buildPhases = (
+				16E2239149ADC352CE8A862C /* [CP] Check Pods Manifest.lock */,
 				A067EC69258E22180073667A /* Sources */,
 				A067EC6A258E22180073667A /* Frameworks */,
 				A067EC6B258E22180073667A /* Resources */,
+				E1D69B815F244FCDB7B33789 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,6 +432,9 @@
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = BlackStone;
 				TargetAttributes = {
+					A040D99F258E73D90057B5FC = {
+						CreatedOnToolsVersion = 11.5;
+					};
 					A067EC4B258E22160073667A = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -223,6 +464,7 @@
 				A067EC4B258E22160073667A /* BlackStoneTask */,
 				A067EC61258E22180073667A /* BlackStoneTaskTests */,
 				A067EC6C258E22180073667A /* BlackStoneTaskUITests */,
+				A040D99F258E73D90057B5FC /* CodeChallenge */,
 			);
 		};
 /* End PBXProject section */
@@ -234,6 +476,7 @@
 			files = (
 				A067EC5C258E22180073667A /* LaunchScreen.storyboard in Resources */,
 				A067EC59258E22180073667A /* Assets.xcassets in Resources */,
+				A04F9921258E5ADA008754E8 /* CurrencyConverterViewController.xib in Resources */,
 				A067EC57258E22160073667A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,14 +497,140 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		16E2239149ADC352CE8A862C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlackStoneTask-BlackStoneTaskUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A6863264610FE15510D831B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlackStoneTask/Pods-BlackStoneTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlackStoneTask/Pods-BlackStoneTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlackStoneTask/Pods-BlackStoneTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDB2567CEACE541F05A0E8DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlackStoneTaskTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C107519047702392D8192F20 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlackStoneTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1D69B815F244FCDB7B33789 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlackStoneTask-BlackStoneTaskUITests/Pods-BlackStoneTask-BlackStoneTaskUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlackStoneTask-BlackStoneTaskUITests/Pods-BlackStoneTask-BlackStoneTaskUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlackStoneTask-BlackStoneTaskUITests/Pods-BlackStoneTask-BlackStoneTaskUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		A040D99C258E73D90057B5FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A040D9A3258E73D90057B5FC /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A067EC48258E22160073667A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A04F98FE258E2F50008754E8 /* ScreenState.swift in Sources */,
+				A04F9908258E3199008754E8 /* MoyaCurrenciesEndPoint.swift in Sources */,
 				A067EC54258E22160073667A /* ViewController.swift in Sources */,
+				A040D990258E6CC90057B5FC /* Array+Extension.swift in Sources */,
+				A04F991D258E4FCC008754E8 /* CurrenciesRatesTableViewDataSource.swift in Sources */,
 				A067EC50258E22160073667A /* AppDelegate.swift in Sources */,
+				A04F9902258E3068008754E8 /* CurrenciesResponce.swift in Sources */,
 				A067EC52258E22160073667A /* SceneDelegate.swift in Sources */,
+				A04F990C258E37DA008754E8 /* DefaultCurrenciesUseCase.swift in Sources */,
+				A04F9915258E4032008754E8 /* Constants.swift in Sources */,
+				A04F9904258E311C008754E8 /* MoyaCurrenciesDataSource.swift in Sources */,
+				A04F9917258E4A17008754E8 /* CurrenciesConvertResponse.swift in Sources */,
+				A04F9906258E314F008754E8 /* CurrenciesEndPoint.swift in Sources */,
+				A04F9920258E5ADA008754E8 /* CurrencyConverterViewController.swift in Sources */,
+				A04F98FC258E2ECC008754E8 /* CurrenciesViewModel.swift in Sources */,
+				A04F9900258E3020008754E8 /* CurrenciesDataSource.swift in Sources */,
+				A04F991A258E4C9A008754E8 /* CurrencyRateScreenData.swift in Sources */,
+				A04F990A258E369C008754E8 /* CurrenciesUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +685,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A040D9A4258E73D90057B5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.16;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A040D9A5258E73D90057B5FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.16;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		A067EC74258E22180073667A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -432,6 +823,7 @@
 		};
 		A067EC77258E22180073667A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13A61F6BC13F414D7CDE83CF /* Pods-BlackStoneTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +841,7 @@
 		};
 		A067EC78258E22180073667A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84B365F3B5C9E05F879D9774 /* Pods-BlackStoneTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +859,7 @@
 		};
 		A067EC7A258E22180073667A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47F60937F3BDBEE3779A893F /* Pods-BlackStoneTaskTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +881,7 @@
 		};
 		A067EC7B258E22180073667A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB85DD71C4024DBEB7229118 /* Pods-BlackStoneTaskTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +903,7 @@
 		};
 		A067EC7D258E22180073667A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42799086E33684A98BFF9113 /* Pods-BlackStoneTask-BlackStoneTaskUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +923,7 @@
 		};
 		A067EC7E258E22180073667A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01D347B76A49C3CE54AD611F /* Pods-BlackStoneTask-BlackStoneTaskUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -547,6 +944,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A040D9A6258E73D90057B5FC /* Build configuration list for PBXNativeTarget "CodeChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A040D9A4258E73D90057B5FC /* Debug */,
+				A040D9A5258E73D90057B5FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A067EC47258E22160073667A /* Build configuration list for PBXProject "BlackStoneTask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
