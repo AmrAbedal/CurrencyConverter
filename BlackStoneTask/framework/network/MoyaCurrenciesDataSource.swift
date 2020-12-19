@@ -23,7 +23,7 @@ class MoyaCurrenciesDataSource: CurrenciesDataSource {
     
     func loadCurrenciesRates( base: String, sympols: [String]) -> Single<CurrenciesRateResponse> {
         return provider.rx
-            .request(.loadCurrenciesRates(baseCurrency: base, selcectedSymplos: sympols))
+            .request(.loadCurrenciesRates(baseCurrency: base, selcectedSymbols: sympols))
             .map{
                 try JSONDecoder().decode(CurrenciesRateResponse.self, from: $0.data)
         }

@@ -12,7 +12,7 @@ import Moya
 extension CurrenciesEndPoint: TargetType {
     var baseURL: URL {
         switch self {
-        case .loadCurrencies, .loadCurrenciesRates(_,_):
+        case .loadCurrencies, .loadCurrenciesRates:
             return URL(string:Constants.baseURL)!
         }
     }
@@ -22,14 +22,14 @@ extension CurrenciesEndPoint: TargetType {
         case .loadCurrencies:
             return "symbols"
             
-        case .loadCurrenciesRates(baseCurrency: _, selcectedSymplos: _):
+        case .loadCurrenciesRates:
             return "latest"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .loadCurrencies, .loadCurrenciesRates(_,_):
+        case .loadCurrencies, .loadCurrenciesRates:
             return .get
         }
     }
@@ -42,12 +42,12 @@ extension CurrenciesEndPoint: TargetType {
         switch self {
         case .loadCurrencies:
             return .requestParameters(parameters: ["access_key": Constants.secretKey], encoding: URLEncoding.queryString)
-        case .loadCurrenciesRates(baseCurrency: let baseCurrency, selcectedSymplos: let selcectedSymplos):
-              return .requestParameters(parameters:
+        case .loadCurrenciesRates(baseCurrency: let baseCurrency, selcectedSymbols: let selcectedSymbols):
+            return .requestParameters(parameters:
                 ["access_key": Constants.secretKey,
                  //MARK: - uncomment the next line of code to work on Fixer beginner plan
-//                 "base":baseCurrency,
-                 "symbols":selcectedSymplos.joined(separator: ",")], encoding: URLEncoding.queryString)
+                    //                 "base":baseCurrency,
+                    "symbols":selcectedSymbols.joined(separator: ",")], encoding: URLEncoding.queryString)
         }
     }
     
