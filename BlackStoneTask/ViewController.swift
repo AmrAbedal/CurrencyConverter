@@ -10,11 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let baseCurrencies: [String] = ["USD","AUD","CAD","PLN","MXN"]
+    @IBOutlet weak var selectedCurrencyTableView: UITableView!
+    @IBOutlet weak var baseCurrencyButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
 
+    @IBAction func baseCurrencyButtonTapped(_ sender: UIButton) {
+        
+    }
+    
 }
 
