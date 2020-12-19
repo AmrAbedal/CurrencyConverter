@@ -11,4 +11,5 @@ import RxSwift
 
 protocol CurrenciesDataSource  {
     func loadCurrencies() -> Single<CurrenciesResponce>
+    func loadCurrenciesRates(base: String, sympols: [String]) -> Single<CurrenciesRateResponse>
 }

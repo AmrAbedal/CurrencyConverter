@@ -27,5 +27,8 @@ class CurrenciesViewModel {
             self.currenciesSubject.onNext(.failure(error.localizedDescription))
         }).disposed(by: disposable)
     }
+    func loadCurrencyRates(base: String,symbols: [String]) {
+
+    }
     
 }

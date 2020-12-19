@@ -1,5 +1,5 @@
 //
-//  MoyaCurrenciesDataSource.swift
+//  CurrencyRateScreenData.swift
 //  BlackStoneTask
 //
 //  Created by Amr AbdelWahab on 19/12/2020.
@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+
+struct CurrencyRateScreenData {
+    let symbol: String
+    let rate: Double
+}

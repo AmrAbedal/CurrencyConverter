@@ -8,6 +8,7 @@ target 'BlackStoneTask' do
   # Pods for BlackStoneTask
 
   pod 'Moya/RxSwift'
+  pod 'DropDown'
   target 'BlackStoneTaskTests' do
     inherit! :search_paths
     # Pods for testing

@@ -19,4 +19,14 @@ class DefaultCurrenciesUseCase: CurrenciesUseCase {
             }
         }
     }
+    func loadCurrenciesRates(dataSource: CurrenciesDataSource,base: String, sympols: [String]) -> Single<ScreenState<[CurrencyRateScreenData]>> {
+        return dataSource.loadCurrenciesRates(base: base, sympols: sympols).map {
+            if $0.success {
+                return .success($0.rates.map({CurrencyRateScreenData(symbol:$0.key,rate:$0.value)}))
+            } else {
+                return .failure("error in fetching currencies rates from Server")
+            }
+        }
+    }
+    
 }

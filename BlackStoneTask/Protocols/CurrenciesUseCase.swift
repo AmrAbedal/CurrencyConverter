@@ -11,5 +11,6 @@ import RxSwift
 
 protocol CurrenciesUseCase {
     func loadCurrenciesUsecase(dataSource: CurrenciesDataSource) -> Single<ScreenState<[String]>>
+    func loadCurrenciesRates(dataSource: CurrenciesDataSource, base: String, sympols: [String]) -> Single<ScreenState<[CurrencyRateScreenData]>>
 }
 
