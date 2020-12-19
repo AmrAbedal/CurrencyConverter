@@ -45,6 +45,7 @@ extension CurrenciesEndPoint: TargetType {
         case .loadCurrenciesRates(baseCurrency: let baseCurrency, selcectedSymplos: let selcectedSymplos):
               return .requestParameters(parameters:
                 ["access_key": Constants.secretKey,
+                 //MARK: - uncomment the next line of code to work on Fixer beginner plan
 //                 "base":baseCurrency,
                  "symbols":selcectedSymplos.joined(separator: ",")], encoding: URLEncoding.queryString)
         }

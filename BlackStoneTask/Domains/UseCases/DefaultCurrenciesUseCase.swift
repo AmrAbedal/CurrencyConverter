@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 
 class DefaultCurrenciesUseCase: CurrenciesUseCase {
+    
     func loadCurrenciesUsecase(dataSource: CurrenciesDataSource) -> Single<ScreenState<[String]>> {
         return dataSource.loadCurrencies().map {
             if $0.success {
@@ -19,6 +20,7 @@ class DefaultCurrenciesUseCase: CurrenciesUseCase {
             }
         }
     }
+    
     func loadCurrenciesRates(dataSource: CurrenciesDataSource,base: String, sympols: [String]) -> Single<ScreenState<[CurrencyRateScreenData]>> {
         return dataSource.loadCurrenciesRates(base: base, sympols: sympols).map {
             if $0.success {
@@ -28,5 +30,4 @@ class DefaultCurrenciesUseCase: CurrenciesUseCase {
             }
         }
     }
-    
 }

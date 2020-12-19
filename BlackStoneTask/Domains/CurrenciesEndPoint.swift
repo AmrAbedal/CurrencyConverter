@@ -10,5 +10,5 @@ import Foundation
 
 enum CurrenciesEndPoint {
     case loadCurrencies
-    case loadCurrenciesRates(baseCurrency: String,selcectedSymplos: [String])
+    case loadCurrenciesRates(baseCurrency: String, selcectedSymplos: [String])
 }
