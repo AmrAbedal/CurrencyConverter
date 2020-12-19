@@ -5,13 +5,13 @@
 //  Created by Amr AbdelWahab on 19/12/2020.
 //  Copyright © 2020 BlackStone. All rights reserved.
 //
-
 import UIKit
 import RxSwift
 import DropDown
 
 class ViewController: UIViewController {
     private let disposable = DisposeBag()
+    private var selectedValueIndex: Int?
     private var baseCurrencies: [String] = []
     @IBOutlet weak var selectedCurrencyTableView: UITableView!
     @IBOutlet weak var baseCurrencyButton: UIButton!
@@ -20,7 +20,8 @@ class ViewController: UIViewController {
         self?.openCurrencyChangeDialog(currency: currency)
     })
     private func openCurrencyChangeDialog(currency: CurrencyRateScreenData) {
-        
+        let currencyConverterViewController = CurrencyConverterViewController(baseCurrency: "USD", selectedCurrency: currency)
+        self.present(currencyConverterViewController, animated: true, completion: nil)
     }
     private lazy var viewModel = CurrenciesViewModel()
     override func viewDidLoad() {
@@ -37,6 +38,7 @@ class ViewController: UIViewController {
     }
     private func setupRatesTableView() {
         selectedCurrencyTableView.dataSource = currenciesRatesTableViewDataSource
+        selectedCurrencyTableView.delegate = currenciesRatesTableViewDataSource
     }
     private func setupBaseCurrencyDropDown() {
         let dropDown = DropDown()
@@ -95,6 +97,5 @@ class ViewController: UIViewController {
     @IBAction func baseCurrencyButtonTapped(_ sender: UIButton) {
         dropDown.show()
     }
-    
 }
 
