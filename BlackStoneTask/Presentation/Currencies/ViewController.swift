@@ -20,7 +20,10 @@ class ViewController: UIViewController {
         self?.openCurrencyChangeDialog(currency: currency)
     })
     private func openCurrencyChangeDialog(currency: CurrencyRateScreenData) {
-        let currencyConverterViewController = CurrencyConverterViewController(baseCurrency: "USD", selectedCurrency: currency)
+        guard let baseCurrency = self.baseCurrencies[safe: selectedValueIndex] else {
+            return
+        }
+        let currencyConverterViewController = CurrencyConverterViewController(baseCurrency: baseCurrency, selectedCurrency: currency)
         self.present(currencyConverterViewController, animated: true, completion: nil)
     }
     private lazy var viewModel = CurrenciesViewModel()
@@ -32,8 +35,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         viewModel.laodCurrencies()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         dropDown.anchorView = baseCurrencyButton // UIView or UIBarButtonItem
     }
     private func setupRatesTableView() {
@@ -41,12 +44,10 @@ class ViewController: UIViewController {
         selectedCurrencyTableView.delegate = currenciesRatesTableViewDataSource
     }
     private func setupBaseCurrencyDropDown() {
-        let dropDown = DropDown()
-        // Action triggered on selection
         dropDown.width = 200
-        dropDown.direction = .top
+        dropDown.direction = .bottom
         dropDown.selectionAction = { [weak self] (index: Int, item: String) in
-            self?.didSelectCurrency(base: item)
+            self?.didSelectCurrency(index: index)
         }
     }
     private func setupSubscribers() {
@@ -71,7 +72,7 @@ class ViewController: UIViewController {
         case .failure(_): break
         }
     }
-    private func handleCurrenciesRateState(state: ScreenState<[CurrencyRateScreenData]> ) {
+    private func handleCurrenciesRateState(state: ScreenState<CurrencyRatesScreenData> ) {
         switch state {
         case .loading: break
         case .success(let rates): handleCurrenciesRates(rates: rates)
@@ -81,17 +82,18 @@ class ViewController: UIViewController {
     private func handleSuccess(currencies: [String]) {
         self.baseCurrencies = currencies
         dropDown.dataSource = currencies
-        baseCurrencyButton.setTitle(currencies.first ?? "Select Currency", for: .normal)
-        guard let base = self.baseCurrencies.first else {
+        didSelectCurrency(index: 0)
+    }
+    private func didSelectCurrency(index: Int) {
+        guard let base = self.baseCurrencies[safe: index] else {
             return
         }
-        didSelectCurrency(base: base)
-    }
-    private func didSelectCurrency(base: String) {
         viewModel.loadCurrencyRates(base: base, symbols: baseCurrencies.filter({$0 != base}))
     }
-    private func handleCurrenciesRates(rates: [CurrencyRateScreenData]) {
-        currenciesRatesTableViewDataSource.items = rates
+    private func handleCurrenciesRates(rates: CurrencyRatesScreenData) {
+        selectedValueIndex = self.baseCurrencies.firstIndex(where: {$0 == rates.base})
+        baseCurrencyButton.setTitle(rates.base , for: .normal)
+        currenciesRatesTableViewDataSource.items = rates.currencies
         selectedCurrencyTableView.reloadData()
     }
     @IBAction func baseCurrencyButtonTapped(_ sender: UIButton) {
