@@ -12,6 +12,7 @@ import RxSwift
 class CurrenciesViewModel {
     private let disposable = DisposeBag()
     let currenciesSubject = BehaviorSubject<ScreenState<[String]>?>(value: nil)
+    let currencyRatesSubject = BehaviorSubject<ScreenState<[CurrencyRateScreenData]>?>(value: nil)
     private let dataSource: CurrenciesDataSource
     private let currenciesUseCase: CurrenciesUseCase
     init(dataSource: CurrenciesDataSource = MoyaCurrenciesDataSource(),
@@ -28,7 +29,12 @@ class CurrenciesViewModel {
         }).disposed(by: disposable)
     }
     func loadCurrencyRates(base: String,symbols: [String]) {
-
+        currenciesUseCase.loadCurrenciesRates(dataSource: dataSource,base: base,sympols: symbols)
+            .subscribe(onSuccess: {
+            result in
+            self.currencyRatesSubject.onNext(result)
+        }, onError: {error in
+            self.currencyRatesSubject.onNext(.failure(error.localizedDescription))
+        }).disposed(by: disposable)
     }
-    
 }

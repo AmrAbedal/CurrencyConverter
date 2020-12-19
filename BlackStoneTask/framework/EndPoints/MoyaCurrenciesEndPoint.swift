@@ -45,7 +45,7 @@ extension CurrenciesEndPoint: TargetType {
         case .loadCurrenciesRates(baseCurrency: let baseCurrency, selcectedSymplos: let selcectedSymplos):
               return .requestParameters(parameters:
                 ["access_key": Constants.secretKey,
-                 "base":baseCurrency,
+//                 "base":baseCurrency,
                  "symbols":selcectedSymplos.joined(separator: ",")], encoding: URLEncoding.queryString)
         }
     }

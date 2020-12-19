@@ -12,13 +12,20 @@ import DropDown
 
 class ViewController: UIViewController {
     private let disposable = DisposeBag()
-    let baseCurrencies: [String] = []
+    private var baseCurrencies: [String] = []
     @IBOutlet weak var selectedCurrencyTableView: UITableView!
     @IBOutlet weak var baseCurrencyButton: UIButton!
     private let dropDown = DropDown()
+    private lazy var currenciesRatesTableViewDataSource = CurrenciesRatesTableViewDataSource(selectItemAction: { [weak self] currency in
+        self?.openCurrencyChangeDialog(currency: currency)
+    })
+    private func openCurrencyChangeDialog(currency: CurrencyRateScreenData) {
+        
+    }
     private lazy var viewModel = CurrenciesViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupRatesTableView()
         setupBaseCurrencyDropDown()
         setupSubscribers()
         // Do any additional setup after loading the view.
@@ -27,7 +34,9 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         dropDown.anchorView = baseCurrencyButton // UIView or UIBarButtonItem
-
+    }
+    private func setupRatesTableView() {
+        selectedCurrencyTableView.dataSource = currenciesRatesTableViewDataSource
     }
     private func setupBaseCurrencyDropDown() {
         let dropDown = DropDown()
@@ -35,14 +44,22 @@ class ViewController: UIViewController {
         dropDown.width = 200
         dropDown.direction = .top
         dropDown.selectionAction = { [weak self] (index: Int, item: String) in
-          print("Selected item: \(item) at index: \(index)")
+            self?.didSelectCurrency(base: item)
         }
     }
     private func setupSubscribers() {
-        viewModel.currenciesSubject.subscribe({ [weak self] event in
-            if let element = event.element, let state = element {
-                self?.handleCurrenciesState(state: state)
-            }
+        viewModel.currenciesSubject
+            .subscribe({ [weak self] event in
+                if let element = event.element, let state = element {
+                    self?.handleCurrenciesState(state: state)
+                }
+            }).disposed(by: disposable)
+        
+        viewModel.currencyRatesSubject
+            .subscribe({ [weak self] event in
+                if let element = event.element, let state = element {
+                    self?.handleCurrenciesRateState(state: state)
+                }
             }).disposed(by: disposable)
     }
     private func handleCurrenciesState(state: ScreenState<[String]> ) {
@@ -52,8 +69,28 @@ class ViewController: UIViewController {
         case .failure(_): break
         }
     }
+    private func handleCurrenciesRateState(state: ScreenState<[CurrencyRateScreenData]> ) {
+        switch state {
+        case .loading: break
+        case .success(let rates): handleCurrenciesRates(rates: rates)
+        case .failure(_): break
+        }
+    }
     private func handleSuccess(currencies: [String]) {
+        self.baseCurrencies = currencies
         dropDown.dataSource = currencies
+        baseCurrencyButton.setTitle(currencies.first ?? "Select Currency", for: .normal)
+        guard let base = self.baseCurrencies.first else {
+            return
+        }
+        didSelectCurrency(base: base)
+    }
+    private func didSelectCurrency(base: String) {
+        viewModel.loadCurrencyRates(base: base, symbols: baseCurrencies.filter({$0 != base}))
+    }
+    private func handleCurrenciesRates(rates: [CurrencyRateScreenData]) {
+        currenciesRatesTableViewDataSource.items = rates
+        selectedCurrencyTableView.reloadData()
     }
     @IBAction func baseCurrencyButtonTapped(_ sender: UIButton) {
         dropDown.show()
