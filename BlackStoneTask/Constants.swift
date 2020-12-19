@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct Constants {
+    static let baseURL = "http://data.fixer.io/api/"
+    static let secretKey = "secretKey"
+}
