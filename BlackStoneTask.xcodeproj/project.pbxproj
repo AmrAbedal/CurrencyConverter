@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		18E17B68CB135E3F34539FF4 /* Pods_BlackStoneTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262A5F89AD21DB04C1BB058F /* Pods_BlackStoneTaskTests.framework */; };
 		A040D990258E6CC90057B5FC /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A040D98F258E6CC90057B5FC /* Array+Extension.swift */; };
+		A040D9A3258E73D90057B5FC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A040D9A2258E73D90057B5FC /* main.swift */; };
 		A04F98FC258E2ECC008754E8 /* CurrenciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F98FB258E2ECC008754E8 /* CurrenciesViewModel.swift */; };
 		A04F98FE258E2F50008754E8 /* ScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F98FD258E2F50008754E8 /* ScreenState.swift */; };
 		A04F9900258E3020008754E8 /* CurrenciesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F98FF258E3020008754E8 /* CurrenciesDataSource.swift */; };
@@ -53,6 +54,18 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A040D99E258E73D90057B5FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		01D347B76A49C3CE54AD611F /* Pods-BlackStoneTask-BlackStoneTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackStoneTask-BlackStoneTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-BlackStoneTask-BlackStoneTaskUITests/Pods-BlackStoneTask-BlackStoneTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
 		13A61F6BC13F414D7CDE83CF /* Pods-BlackStoneTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackStoneTask.debug.xcconfig"; path = "Target Support Files/Pods-BlackStoneTask/Pods-BlackStoneTask.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +74,8 @@
 		47F60937F3BDBEE3779A893F /* Pods-BlackStoneTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackStoneTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-BlackStoneTaskTests/Pods-BlackStoneTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		84B365F3B5C9E05F879D9774 /* Pods-BlackStoneTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackStoneTask.release.xcconfig"; path = "Target Support Files/Pods-BlackStoneTask/Pods-BlackStoneTask.release.xcconfig"; sourceTree = "<group>"; };
 		A040D98F258E6CC90057B5FC /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		A040D9A0258E73D90057B5FC /* CodeChallenge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CodeChallenge; sourceTree = BUILT_PRODUCTS_DIR; };
+		A040D9A2258E73D90057B5FC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A04F98FB258E2ECC008754E8 /* CurrenciesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesViewModel.swift; sourceTree = "<group>"; };
 		A04F98FD258E2F50008754E8 /* ScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenState.swift; sourceTree = "<group>"; };
 		A04F98FF258E3020008754E8 /* CurrenciesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesDataSource.swift; sourceTree = "<group>"; };
@@ -96,6 +111,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A040D99D258E73D90057B5FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A067EC49258E22160073667A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -154,6 +176,14 @@
 				A04F9912258E38AC008754E8 /* UseCases */,
 			);
 			path = Domains;
+			sourceTree = "<group>";
+		};
+		A040D9A1258E73D90057B5FC /* CodeChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				A040D9A2258E73D90057B5FC /* main.swift */,
+			);
+			path = CodeChallenge;
 			sourceTree = "<group>";
 		};
 		A04F990D258E37FD008754E8 /* Protocols */ = {
@@ -258,6 +288,7 @@
 				A067EC4E258E22160073667A /* BlackStoneTask */,
 				A067EC65258E22180073667A /* BlackStoneTaskTests */,
 				A067EC70258E22180073667A /* BlackStoneTaskUITests */,
+				A040D9A1258E73D90057B5FC /* CodeChallenge */,
 				A067EC4D258E22160073667A /* Products */,
 				771DEAAAD1C014BC3367372A /* Pods */,
 				138B0E6977B4FE5F796AA325 /* Frameworks */,
@@ -270,6 +301,7 @@
 				A067EC4C258E22160073667A /* BlackStoneTask.app */,
 				A067EC62258E22180073667A /* BlackStoneTaskTests.xctest */,
 				A067EC6D258E22180073667A /* BlackStoneTaskUITests.xctest */,
+				A040D9A0258E73D90057B5FC /* CodeChallenge */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -315,6 +347,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A040D99F258E73D90057B5FC /* CodeChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A040D9A6258E73D90057B5FC /* Build configuration list for PBXNativeTarget "CodeChallenge" */;
+			buildPhases = (
+				A040D99C258E73D90057B5FC /* Sources */,
+				A040D99D258E73D90057B5FC /* Frameworks */,
+				A040D99E258E73D90057B5FC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CodeChallenge;
+			productName = CodeChallenge;
+			productReference = A040D9A0258E73D90057B5FC /* CodeChallenge */;
+			productType = "com.apple.product-type.tool";
+		};
 		A067EC4B258E22160073667A /* BlackStoneTask */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A067EC76258E22180073667A /* Build configuration list for PBXNativeTarget "BlackStoneTask" */;
@@ -383,6 +432,9 @@
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = BlackStone;
 				TargetAttributes = {
+					A040D99F258E73D90057B5FC = {
+						CreatedOnToolsVersion = 11.5;
+					};
 					A067EC4B258E22160073667A = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -412,6 +464,7 @@
 				A067EC4B258E22160073667A /* BlackStoneTask */,
 				A067EC61258E22180073667A /* BlackStoneTaskTests */,
 				A067EC6C258E22180073667A /* BlackStoneTaskUITests */,
+				A040D99F258E73D90057B5FC /* CodeChallenge */,
 			);
 		};
 /* End PBXProject section */
@@ -548,6 +601,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A040D99C258E73D90057B5FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A040D9A3258E73D90057B5FC /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A067EC48258E22160073667A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -624,6 +685,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A040D9A4258E73D90057B5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.16;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A040D9A5258E73D90057B5FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.16;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		A067EC74258E22180073667A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -861,6 +944,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A040D9A6258E73D90057B5FC /* Build configuration list for PBXNativeTarget "CodeChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A040D9A4258E73D90057B5FC /* Debug */,
+				A040D9A5258E73D90057B5FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A067EC47258E22160073667A /* Build configuration list for PBXProject "BlackStoneTask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
