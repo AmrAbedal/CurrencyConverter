@@ -11,22 +11,21 @@ import RxSwift
 import Moya
 
 class MoyaCurrenciesDataSource: CurrenciesDataSource {
-   
     
     let provider = MoyaProvider<CurrenciesEndPoint>()
     func loadCurrencies() -> Single<CurrenciesResponce> {
-      return provider.rx
-        .request(.loadCurrencies)
-        .map{
-            try JSONDecoder().decode(CurrenciesResponce.self, from: $0.data)
+        return provider.rx
+            .request(.loadCurrencies)
+            .map{
+                try JSONDecoder().decode(CurrenciesResponce.self, from: $0.data)
         }
     }
     
     func loadCurrenciesRates( base: String, sympols: [String]) -> Single<CurrenciesRateResponse> {
-           return provider.rx
-           .request(.loadCurrenciesRates(baseCurrency: base, selcectedSymplos: sympols))
-           .map{
-               try JSONDecoder().decode(CurrenciesRateResponse.self, from: $0.data)
-           }
-       }
+        return provider.rx
+            .request(.loadCurrenciesRates(baseCurrency: base, selcectedSymbols: sympols))
+            .map{
+                try JSONDecoder().decode(CurrenciesRateResponse.self, from: $0.data)
+        }
+    }
 }

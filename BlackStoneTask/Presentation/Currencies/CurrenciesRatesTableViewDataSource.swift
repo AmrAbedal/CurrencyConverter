@@ -21,7 +21,7 @@ class CurrenciesRatesTableViewDataSource: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
-        cell.textLabel?.text = items[indexPath.row].symbol
+        cell.textLabel?.text = "\(items[indexPath.row].rate)  \(items[indexPath.row].symbol)"
         return cell
     }
 }

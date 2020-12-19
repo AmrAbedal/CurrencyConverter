@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct CurrencyRatesScreenData {
+    let base: String
+    let currencies: [CurrencyRateScreenData]
+}
 
 struct CurrencyRateScreenData {
     let symbol: String
