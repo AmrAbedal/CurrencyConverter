@@ -10,8 +10,9 @@ import Foundation
 //MARK: - Add arithmetic operators
 //2.25 4.50 1.25 5 = 27
 
-
-
+let value = ((2.25 + 4.50) - (1.25)) * 5
+print(value)
+// the best result I have git is 27.5
 
 //MARK: - Arnagram Problem
 extension Array where Element == Character {
@@ -62,3 +63,31 @@ func dynamicFibonacci(number: Int) -> Int {
     return fib1
 }
 print(dynamicFibonacci(number: 9))
+
+//MARK: - QUESTIONS
+let questsions =
+"""
+ • What 3rd party libraries did you use and why ?
+:- Moya/RxSwift for networking, I'm using the reactive version of Moya with RXSwift, as I'm using MVVM architecture pattern
+
+• What architecture did you use and why ?
+:- MVVM, I prefere using MVVM Architecture in small tasks, or we can say in bit small apps that we don't want to overEngineer, regarding this task, I have to choose between MVP, or MVVM, I prefere MVVM over MVP, MVVM is the reactive version of MVP .
+
+• Let’s say that your team is working on this app and you're looking to add a new
+feature. Describe the process that you would follow in your current place of work
+to bring this from an initial idea to a live feature in production. What are the
+positives and negatives of this approach?
+
+: -
+
+1 - from my point of view I think I have to explain what the purpose of this feature at first, and why we need to add this feature to our app.
+2 - ask them about any feedback about is that valid or not and why from different aspects even its technical or its a business.
+3 - try to spread it to collect a more feedbacks, to help us to validate the idea.
+4 - then if it valid and also will help our business to grow, we will put it in our backlog
+
+positives
+ sharing Ideas
+
+negatives
+we are a Startup.our backlog is full, So it take time to be live in production
+"""
