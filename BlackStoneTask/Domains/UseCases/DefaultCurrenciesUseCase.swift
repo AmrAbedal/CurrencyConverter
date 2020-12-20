@@ -14,7 +14,7 @@ class DefaultCurrenciesUseCase: CurrenciesUseCase {
     func loadCurrenciesUsecase(dataSource: CurrenciesDataSource) -> Single<ScreenState<[String]>> {
         return dataSource.loadCurrencies().map {
             if $0.success {
-                return .success($0.symbols.map({$0.key}))
+                return .success($0.symbols.map({$0.key}).sorted())
             } else {
                 return .failure("error in fetching currencies from Server")
             }
